@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:linear.app)",
+      "WebFetch(domain:gentler.app)",
+      "WebFetch(domain:automata.ltd)",
+      "Bash(curl:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
