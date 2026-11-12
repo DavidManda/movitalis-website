@@ -4,7 +4,9 @@
       "WebFetch(domain:linear.app)",
       "WebFetch(domain:gentler.app)",
       "WebFetch(domain:automata.ltd)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(firebase projects:list:*)",
+      "Bash(firebase deploy:*)"
     ],
     "deny": [],
     "ask": []
