@@ -1,59 +1,22 @@
-'use client';
-
-import { motion } from 'framer-motion';
 import Container from '../layout/container';
 import AppStoreButton from '../ui/app-store-button';
 import { FINAL_CTA } from '@/lib/content';
-import Parallax from '../animations/parallax';
 
+// The page's one loud moment: a full band in the accent colour, with ink
+// type (white on this orange falls short of contrast guidelines).
 export default function FinalCTA() {
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden" style={{ background: 'linear-gradient(135deg, #FF6B35 0%, #FF8C42 50%, #FF6B35 100%)' }}>
-      <Container className="relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
-          {/* Headline */}
-          <motion.h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
+    <section className="bg-accent py-20 md:py-28">
+      <Container size="md">
+        <div className="text-center">
+          <h2 className="text-4xl font-bold tracking-tight text-ink md:text-6xl">
             {FINAL_CTA.headline}
-          </motion.h2>
-
-          {/* Subheadline */}
-          <motion.p
-            className="text-xl text-white/90 mb-10"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            {FINAL_CTA.subheadline}
-          </motion.p>
-
-          {/* CTA Button */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="mb-6 flex justify-center"
-          >
-            <AppStoreButton className="mx-auto" />
-          </motion.div>
-
-          {/* Availability */}
-          <motion.p
-            className="text-white/70 text-sm"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            {FINAL_CTA.availability}
-          </motion.p>
+          </h2>
+          <p className="mx-auto mt-5 max-w-2xl text-xl text-ink">{FINAL_CTA.subheadline}</p>
+          <div className="mt-9 flex justify-center">
+            <AppStoreButton />
+          </div>
+          <p className="mt-4 text-sm text-ink">{FINAL_CTA.availability}</p>
         </div>
       </Container>
     </section>
