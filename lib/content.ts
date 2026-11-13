@@ -134,7 +134,7 @@ export const SOCIAL_PROOF = {
   },
   // App Store rating as shown on the Romanian storefront, where almost
   // all ratings are (apps.apple.com/ro, checked 2026-11-13)
-  rating: '5.0 on the App Store · 51 ratings',
+  rating: '5.0 on the App Store',
   // All written five-star App Store reviews (text and star rating read
   // from the App Store on 2026-11-13). Romanian ones are translated and
   // say so. Only real reviews with a star rating belong here.
