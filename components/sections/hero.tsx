@@ -50,7 +50,7 @@ export default function Hero() {
               placed into its screen) */}
           <div className="flex justify-center lg:justify-end">
             <img
-              src="/product/hero-3d.png"
+              src="/product/hero-phone.png"
               alt="Movitalis Home screen on iPhone: today’s workout done, the program’s week 5 of 6 and the VO₂ max trend"
               width={1080}
               height={1350}
