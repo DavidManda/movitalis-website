@@ -4,7 +4,6 @@ import Hero from '@/components/sections/hero';
 import VO2Education from '@/components/sections/vo2-education';
 import Features from '@/components/sections/features';
 import HowItWorks from '@/components/sections/how-it-works';
-import ScreenshotStrip from '@/components/sections/screenshot-strip';
 import Comparison from '@/components/sections/comparison';
 import SocialProof from '@/components/sections/social-proof';
 import FinalCTA from '@/components/sections/final-cta';
@@ -28,7 +27,6 @@ export default function Home() {
         <VO2Education />
         <Comparison />
         <Features />
-        <ScreenshotStrip />
         <HowItWorks />
         <SocialProof />
         <FinalCTA />

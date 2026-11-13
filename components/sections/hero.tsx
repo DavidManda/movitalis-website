@@ -45,18 +45,17 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* One phone, the Home screen, tilted */}
-          <div className="flex justify-center lg:justify-end" style={{ perspective: '1600px' }}>
+          {/* One phone, the Home screen, in a real three-dimensional iPhone
+              frame (the mockup the site used before, with the current app
+              placed into its screen) */}
+          <div className="flex justify-center lg:justify-end">
             <img
-              src="/product/phone-home.png"
-              alt="Movitalis Home screen: today’s workout done, the program’s week 5 of 6 and the VO₂ max trend"
-              width={742}
-              height={1582}
-              className="w-[62%] max-w-[330px] lg:w-[78%] lg:max-w-[380px]"
-              style={{
-                transform: 'rotateY(-18deg) rotateX(8deg) rotateZ(4deg)',
-                filter: 'drop-shadow(28px 36px 40px rgba(18, 30, 30, 0.28))',
-              }}
+              src="/product/hero-3d.png"
+              alt="Movitalis Home screen on iPhone: today’s workout done, the program’s week 5 of 6 and the VO₂ max trend"
+              width={1080}
+              height={1350}
+              className="w-[92%] max-w-[460px] lg:w-[125%] lg:max-w-[600px] lg:-mr-10"
+              style={{ filter: 'drop-shadow(24px 34px 38px rgba(18, 30, 30, 0.25))' }}
             />
           </div>
         </div>

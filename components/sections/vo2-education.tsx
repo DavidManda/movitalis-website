@@ -1,23 +1,20 @@
 import Container from '../layout/container';
+import SectionHeading from '../ui/section-heading';
 import { VO2_EDUCATION } from '@/lib/content';
 
+// Three plain statements: a bold lead-in and the sentence that backs it.
 export default function VO2Education() {
   return (
     <section id="vo2" className="bg-ivory py-20 md:py-28">
-      <Container>
-        <div className="max-w-3xl">
-          <h2 className="text-4xl font-bold tracking-tight text-ink md:text-5xl">
-            {VO2_EDUCATION.headline}
-          </h2>
-          <p className="mt-4 text-xl text-ink/70">{VO2_EDUCATION.tagline}</p>
-        </div>
+      <Container size="md">
+        <SectionHeading title={VO2_EDUCATION.headline} />
 
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
+        <div className="mx-auto mt-14 max-w-3xl space-y-10 text-center">
           {VO2_EDUCATION.blocks.map((block) => (
-            <div key={block.id} className="rounded-3xl bg-ivory-deep p-8">
-              <h3 className="text-2xl font-bold tracking-tight text-ink">{block.title}</h3>
-              <p className="mt-3 leading-relaxed text-ink/70">{block.description}</p>
-            </div>
+            <p key={block.id} className="text-2xl leading-snug tracking-tight md:text-3xl font-[family-name:var(--font-instrument)]">
+              <span className="font-bold text-ink">{block.title}.</span>{' '}
+              <span className="font-medium text-ink/60">{block.description}</span>
+            </p>
           ))}
         </div>
       </Container>

@@ -136,8 +136,8 @@ export const SOCIAL_PROOF = {
   // all ratings are (apps.apple.com/ro, checked 2026-11-13)
   rating: '5.0 on the App Store · 51 ratings',
   // All written five-star App Store reviews (text and star rating read
-  // from the App Store on 2026-11-13) plus one Product Hunt comment, which
-  // carries no star rating. Romanian reviews are translated and say so.
+  // from the App Store on 2026-11-13). Romanian ones are translated and
+  // say so. Only real reviews with a star rating belong here.
   reviews: [
     {
       id: 'as-ellie',
@@ -202,14 +202,6 @@ export const SOCIAL_PROOF = {
       quote: 'This program is a good way to give the body the balance we need. Thank you!',
       author: 'Atașa',
       source: 'App Store · December 2023 · translated from Romanian',
-    },
-    {
-      id: 'ph-traun',
-      rating: null,
-      title: null,
-      quote: 'This looks like a refreshing take on fitness trackers that focuses on the things that really matter.',
-      author: 'Traun Leyden',
-      source: 'Comment on the Product Hunt launch',
     },
   ],
 };

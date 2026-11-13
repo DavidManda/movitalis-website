@@ -1,16 +1,14 @@
 import Container from '../layout/container';
+import SectionHeading from '../ui/section-heading';
 import { HOW_IT_WORKS } from '@/lib/content';
 
 export default function HowItWorks() {
   return (
     <section id="how-it-works" className="bg-ivory py-20 md:py-28">
-      <Container>
-        <div className="max-w-3xl">
-          <h2 className="text-4xl font-bold tracking-tight text-ink md:text-5xl">{HOW_IT_WORKS.headline}</h2>
-          <p className="mt-4 text-xl text-ink/70">{HOW_IT_WORKS.subheadline}</p>
-        </div>
+      <Container size="md">
+        <SectionHeading title={HOW_IT_WORKS.headline} subtitle={HOW_IT_WORKS.subheadline} />
 
-        <ol className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8">
+        <ol className="mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
           {HOW_IT_WORKS.steps.map((step) => (
             <li key={step.number} className="border-t-2 border-ink pt-6">
               <span className="text-5xl font-bold tracking-tight text-accent font-[family-name:var(--font-instrument)]">
