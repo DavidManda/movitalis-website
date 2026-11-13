@@ -10,18 +10,18 @@ export const HERO = {
 
 export const VO2_EDUCATION = {
   headline: "What is VO₂ max, and why should you care?",
-  tagline: "It\'s the single best predictor of longevity—and you can improve it",
+  tagline: "It\'s the strongest predictor of longevity we know of—and you can improve it",
   blocks: [
     {
       id: 'what',
       title: 'Your cardiovascular fitness score',
-      description: 'VO₂ max measures how efficiently your body uses oxygen during exercise. It\'s the most accurate measure of your overall fitness.',
+      description: 'VO₂ max measures how efficiently your body uses oxygen during exercise. It\'s the gold-standard measure of cardiorespiratory fitness.',
       icon: 'Microscope',
     },
     {
       id: 'why',
       title: 'The strongest longevity predictor',
-      description: 'In studies of over 1 million people, VO₂ max was a stronger predictor of lifespan than cholesterol, blood pressure, smoking, or diabetes.',
+      description: 'In a study of 122,007 patients (Mandsager et al., JAMA Network Open, 2018), low cardiorespiratory fitness carried a higher risk of death than smoking, diabetes, or heart disease—and the fittest had the lowest risk, with no upper limit.',
       icon: 'AlertTriangle',
     },
     {
@@ -40,7 +40,7 @@ export const FEATURES = {
     {
       id: 'vo2-tracking',
       title: 'Know Your Fitness Age',
-      description: 'See your biological age vs chronological age based on your VO₂ max. Track improvements week by week as your fitness age gets younger.',
+      description: 'See the fitness age your VO₂ max corresponds to, next to your real age, and watch it change as your training adds up.',
       icon: 'Heart',
     },
     {
@@ -52,13 +52,13 @@ export const FEATURES = {
     {
       id: 'intensity-guidance',
       title: 'Save Time',
-      description: 'Efficient 3-4 workouts per week, 30-45 minutes each. No 2-hour gym sessions required. Quality over quantity.',
+      description: 'A weekly plan sized to the time you have—you choose the hours, Movitalis splits them across endurance, cardio and strength.',
       icon: 'Target',
     },
     {
       id: 'effortless-tracking',
       title: 'Zero Effort Tracking',
-      description: 'Just start your workout. Your Apple Watch automatically tracks everything and syncs to Movitalis. No manual entry, ever.',
+      description: 'Just start your workout. Your Apple Watch records it and it shows up in Movitalis through Apple Health—no manual logging.',
       icon: 'Watch',
     },
   ],
@@ -71,8 +71,8 @@ export const HOW_IT_WORKS = {
     {
       number: 1,
       title: 'Start where you are',
-      description: 'Movitalis measures your VO₂ max using your Apple Watch',
-      detail: 'No lab tests needed. Just do any cardio workout and we calculate your baseline automatically.',
+      description: 'Movitalis reads the VO₂ max your Apple Watch measures',
+      detail: 'No lab tests needed. Apple Watch estimates VO₂ max during outdoor walks, runs and hikes; Movitalis picks it up from Apple Health.',
     },
     {
       number: 2,
@@ -84,7 +84,7 @@ export const HOW_IT_WORKS = {
       number: 3,
       title: 'Watch your fitness age drop',
       description: 'Track your VO₂ max improving over time',
-      detail: 'See your fitness age decrease and understand how your training translates to years added to your life.',
+      detail: 'See your fitness age change and what the research says a higher VO₂ max is associated with: more healthy years.',
     },
   ],
 };
@@ -111,7 +111,7 @@ export const COMPARISON = {
     {
       feature: 'Success Metric',
       typical: 'Faster times, weight loss',
-      movitalis: 'Years added to your life',
+      movitalis: 'A higher VO₂ max, for more healthy years',
     },
     {
       feature: 'Philosophy',
@@ -121,31 +121,47 @@ export const COMPARISON = {
   ],
 };
 
+// Every quote here is a real, public review, quoted word for word and
+// attributed to where it was posted. Never add a testimonial that isn't
+// (fake reviews are an unfair commercial practice under EU law).
 export const SOCIAL_PROOF = {
   headline: "Loved by people serious about longevity",
   productHunt: {
-    badge: '#1 Product of the Day',
+    // Wording of the official Product Hunt badge (public/product-hunt-badge.svg)
+    badge: '#1 Product of the Week · Health & Fitness',
     category: 'Health & Fitness',
     link: 'https://www.producthunt.com/products/movitalis',
   },
   testimonials: [
     {
       id: 1,
-      quote: "My VO₂ max went from 38 to 44 in 3 months. I actually understand what 'training zones' mean now and can feel the difference.",
-      author: "Sarah M.",
-      role: "Software engineer, age 34",
+      quote: "I find the app very useful and easy to use. It helped me train in a more sustainable way. 5 stars!!!",
+      author: "Veronica Vanilla",
+      role: "App Store review, July 2024",
     },
     {
       id: 2,
-      quote: "Finally a fitness app that doesn't make me feel guilty for not working out 7 days a week. 3-4 sessions and I'm seeing real progress.",
-      author: "Michael T.",
-      role: "Father of two, busy professional",
+      quote: "Easy to use tool for tracking your exercise in a way that's relevant to health and longevity.",
+      author: "Ellie the med student",
+      role: "App Store review, December 2023",
     },
     {
       id: 3,
-      quote: "I'm not athletic at all, but Movitalis made it approachable. My fitness age dropped 8 years in 4 months. That's wild.",
-      author: "Jessica K.",
-      role: "Accountant, started at VO₂ max 32",
+      quote: "I love the longevity focus of this app",
+      author: "George Columbu",
+      role: "App Store review, November 2025",
+    },
+    {
+      id: 4,
+      quote: "I kept looking for an app that would make me more consistent with my training, and this one really does it well. I recommend it.",
+      author: "geanyhalav",
+      role: "App Store review, June 2024 · translated from Romanian",
+    },
+    {
+      id: 5,
+      quote: "This looks like a refreshing take on fitness trackers that focuses on the things that really matter.",
+      author: "Traun Leyden",
+      role: "Comment on the Product Hunt launch",
     },
   ],
 };
@@ -166,15 +182,15 @@ export const FAQ = {
       questions: [
         {
           q: "Do I need an Apple Watch?",
-          a: "Apple Watch is highly recommended for automatic VO₂ max tracking during workouts. However, you can use Movitalis with iPhone only—you'll just need to manually enter heart rate data or use a compatible chest strap heart rate monitor."
+          a: "Apple Watch is recommended: it measures VO₂ max and runs the Movitalis watch app with live intensity guidance. Without one, workouts recorded by other apps and devices (Garmin, COROS, Strava and others) still appear in Movitalis through Apple Health."
         },
         {
           q: "What iPhone and Apple Watch versions are supported?",
-          a: "Movitalis requires iOS 16 or later. For Apple Watch, you'll need watchOS 9 or later. Most models from Apple Watch Series 3 onwards support VO₂ max measurement."
+          a: "Movitalis requires iOS 17 or later on iPhone and watchOS 10.2 or later on Apple Watch."
         },
         {
           q: "Is Movitalis free?",
-          a: "Yes! Movitalis is free to download and use. All core features including VO₂ max tracking, personalized training plans, and progress tracking are included at no cost."
+          a: "Movitalis is free to download. New accounts get the 8-week starter program free, with no card needed. After that, tracking and analysis of your workouts stay free, and the personalized training plan requires Movitalis Pro. Prices are shown in the app before you buy, and purchases are handled by Apple."
         },
       ],
     },
@@ -187,7 +203,7 @@ export const FAQ = {
         },
         {
           q: "How much time do I need to commit per week?",
-          a: "We recommend 3-4 workouts per week, 30-45 minutes each. That's about 2-3 hours total per week. Quality and consistency matter more than volume—you don't need 2-hour gym sessions to see results."
+          a: "You choose. During setup you pick your weekly training time and the plan is built around it—most people start somewhere between 2 and 5 hours a week. Consistency matters more than volume."
         },
         {
           q: "What types of exercises do I need to do?",
@@ -195,7 +211,7 @@ export const FAQ = {
         },
         {
           q: "How quickly will I see results?",
-          a: "Most users see measurable VO₂ max improvements within 8-12 weeks of consistent training. Some see changes as early as 4-6 weeks. Remember, sustainable progress is better than quick fixes that don't last."
+          a: "It varies from person to person. Training studies typically find measurable VO₂ max improvements after roughly 8-12 weeks of consistent training, which is why the starter program runs 8 weeks. Movitalis shows an estimate based on your own data, not a promise."
         },
       ],
     },
@@ -208,7 +224,7 @@ export const FAQ = {
         },
         {
           q: "Why is VO₂ max important for longevity?",
-          a: "In studies of over 1 million people, VO₂ max was the strongest predictor of lifespan—stronger than blood pressure, cholesterol, smoking status, or diabetes. Higher VO₂ max is associated with lower risk of cardiovascular disease and all-cause mortality."
+          a: "In a study of 122,007 patients (Mandsager et al., JAMA Network Open, 2018), low cardiorespiratory fitness carried a higher risk of death than smoking, diabetes, or heart disease, and higher fitness was associated with lower mortality with no upper limit. These are associations across large groups, not a guarantee for any one person."
         },
         {
           q: "How accurate is Apple Watch VO₂ max measurement?",
@@ -242,15 +258,15 @@ export const FAQ = {
       questions: [
         {
           q: "What data does Movitalis collect?",
-          a: "We only collect health data necessary to calculate your VO₂ max and create training plans—like heart rate, workout duration, and activity type. All data is stored securely and we never sell your personal information. See our Privacy Policy for full details."
+          a: "Your Apple Health data is read on your phone and stays there unless you choose to sync it. Your account stores your email, name, plan and progress. We never sell personal data. See the Privacy Policy for the full details."
         },
         {
           q: "How do I contact support?",
-          a: "You can reach us at support@movitalis.app or through the in-app support feature. We typically respond within 24 hours on weekdays."
+          a: "Email us at dmanda@automata.ltd. We usually reply within a couple of working days."
         },
         {
           q: "Can I delete my account and data?",
-          a: "Yes, absolutely. You can delete your account and all associated data at any time through the app settings or by contacting support."
+          a: "Yes. You can delete your account and its data at any time from the app's settings, or by emailing us."
         },
       ],
     },
@@ -280,5 +296,5 @@ export const FOOTER = {
       { label: 'TikTok', href: 'https://www.tiktok.com/@movitalis' },
     ],
   },
-  copyright: `© ${new Date().getFullYear()} Movitalis. All rights reserved.`,
+  copyright: `© ${new Date().getFullYear()} PROIECT AUTOMATA S.R.L. All rights reserved.`,
 };

@@ -69,9 +69,33 @@ export default function Footer() {
             </a>
           </div>
 
-          {/* Copyright */}
-          <div className="text-center text-gray-500 text-xs">
-            {FOOTER.copyright}
+          {/* Operator details + consumer protection (required in Romania) */}
+          <div className="text-center text-gray-500 text-xs leading-relaxed">
+            <p>
+              {APP_CONFIG.company.name} · CUI {APP_CONFIG.company.cui} · Reg. Com.{' '}
+              {APP_CONFIG.company.tradeRegister}
+            </p>
+            <p>{APP_CONFIG.company.address}</p>
+            <p>
+              <a
+                href="https://anpc.ro/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-white transition-colors"
+              >
+                ANPC (consumer protection)
+              </a>
+              {' · '}
+              <a
+                href="https://anpc.ro/ce-este-sal/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-white transition-colors"
+              >
+                ANPC – alternative dispute resolution
+              </a>
+            </p>
+            <p className="mt-2">{FOOTER.copyright}</p>
           </div>
         </div>
       </Container>

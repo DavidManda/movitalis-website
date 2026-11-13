@@ -146,7 +146,7 @@ export default function FAQPage() {
                 We're here to help. Reach out to our support team anytime.
               </p>
               <a
-                href="mailto:support@movitalis.app"
+                href="mailto:dmanda@automata.ltd"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-primary to-secondary rounded-lg hover:shadow-glow-lg hover:scale-105 transition-all duration-300"
               >
                 Contact Support

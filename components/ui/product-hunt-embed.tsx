@@ -14,11 +14,11 @@ export default function ProductHuntEmbed({ className }: ProductHuntEmbedProps) {
         'inline-block transition-all duration-300 hover:scale-105 hover:opacity-90',
         className
       )}
-      aria-label="Movitalis - #1 Product of the Week on Product Hunt"
+      aria-label="Movitalis on Product Hunt: #1 Product of the Week in Health & Fitness"
     >
       <img
-        src="https://api.producthunt.com/widgets/embed-image/v1/top-post-topic-badge.svg?post_id=940015&theme=light&period=weekly&topic_id=43"
-        alt="Movitalis - A longevity-focused activity tracker, planner & coach | Product Hunt"
+        src="/product-hunt-badge.svg"
+        alt="Product Hunt: #1 Product of the Week in Health & Fitness"
         width="250"
         height="54"
         className="w-auto h-auto"

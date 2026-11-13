@@ -78,6 +78,7 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Movitalis',
+    legalName: 'PROIECT AUTOMATA S.R.L.',
     url: 'https://movitalis.app',
     logo: 'https://movitalis.app/logo.png',
     sameAs: [
@@ -87,7 +88,7 @@ export default function RootLayout({
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      email: 'support@movitalis.app',
+      email: 'dmanda@automata.ltd',
       contactType: 'Customer Support',
     },
   };

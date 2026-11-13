@@ -12,15 +12,20 @@ export default function SocialProof() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [direction, setDirection] = useState(0);
   const testimonials = SOCIAL_PROOF.testimonials;
+  // Auto-advancing content must be pausable (WCAG 2.2.2): it stops while
+  // hovered or focused, and never auto-advances under reduced motion
+  const [paused, setPaused] = useState(false);
 
   useEffect(() => {
+    if (paused) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const timer = setInterval(() => {
       setDirection(1);
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
+    }, 7000);
 
     return () => clearInterval(timer);
-  }, [testimonials.length]);
+  }, [testimonials.length, paused]);
 
   const nextTestimonial = () => {
     setDirection(1);
@@ -52,7 +57,13 @@ export default function SocialProof() {
 
         {/* Testimonial carousel */}
         <div className="max-w-3xl mx-auto">
-          <div className="bg-gray-50 rounded-2xl shadow-xl p-8 md:p-12 relative">
+          <div
+            className="bg-gray-50 rounded-2xl shadow-xl p-8 md:p-12 relative"
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+            onFocus={() => setPaused(true)}
+            onBlur={() => setPaused(false)}
+          >
             {/* Quote mark */}
             <div className="text-6xl text-primary opacity-20 absolute top-4 left-4">"</div>
 

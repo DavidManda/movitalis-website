@@ -19,7 +19,7 @@ export default function TermsPage() {
           </h1>
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-600 mb-8">
-              Last updated: {new Date().toLocaleDateString()}
+              Last updated: 13 November 2026
             </p>
 
             <section className="mb-8">
@@ -29,6 +29,15 @@ export default function TermsPage() {
               </p>
             </section>
 
+            <section className="mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Who we are</h2>
+              <p className="text-gray-700 leading-relaxed">
+                Movitalis is operated by {APP_CONFIG.company.name}, a Romanian company (CUI {APP_CONFIG.company.cui}, Trade Register {APP_CONFIG.company.tradeRegister}), with its registered office at {APP_CONFIG.company.address}. For anything in this document, write to{' '}
+                <a href={`mailto:${APP_CONFIG.supportEmail}`} className="text-primary hover:underline">
+                  {APP_CONFIG.supportEmail}
+                </a>.
+              </p>
+            </section>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Service Description</h2>
               <p className="text-gray-700 leading-relaxed">
@@ -48,6 +57,33 @@ export default function TermsPage() {
               </ul>
             </section>
 
+            <section className="mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Free program, subscriptions and purchases</h2>
+              <ul className="list-disc pl-6 text-gray-700 space-y-2">
+                <li>Movitalis is free to download. New accounts receive the 8-week starter program free of charge; no payment method is required for it.</li>
+                <li>After the starter program, tracking and analysis of your workouts remain free. The personalized training plan and other Pro features require Movitalis Pro, offered as an auto-renewing subscription or a one-time purchase, as shown in the app.</li>
+                <li>Prices are displayed in the app before you buy. Purchases are made through Apple's App Store and charged to your Apple Account.</li>
+                <li>Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period. You can manage or cancel a subscription at any time in your Apple Account settings.</li>
+              </ul>
+            </section>
+            <section className="mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Refunds</h2>
+              <p className="text-gray-700 leading-relaxed">
+                Because payments are processed by Apple, refund requests are handled by Apple: use{' '}
+                <a href="https://reportaproblem.apple.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  reportaproblem.apple.com
+                </a>. If you have a problem with a purchase, you can also write to us and we will help.
+              </p>
+            </section>
+            <section className="mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">App licence</h2>
+              <p className="text-gray-700 leading-relaxed">
+                Your use of the Movitalis app is also covered by Apple's{' '}
+                <a href={APP_CONFIG.appleEulaUrl} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  Licensed Application End User License Agreement
+                </a>. If that agreement and these terms conflict on how the app is licensed, Apple's agreement applies.
+              </p>
+            </section>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Health and Medical Disclaimer</h2>
               <p className="text-gray-700 leading-relaxed">
@@ -97,6 +133,15 @@ export default function TermsPage() {
               </p>
             </section>
 
+            <section className="mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Governing law and your consumer rights</h2>
+              <p className="text-gray-700 leading-relaxed">
+                These terms are governed by Romanian law. If you are a consumer, nothing in them limits the rights you have under the mandatory consumer protection laws of the country where you live, and the limitation of liability above applies only to the extent the law allows. Consumers in Romania can also contact the National Authority for Consumer Protection (ANPC) at{' '}
+                <a href="https://anpc.ro/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  anpc.ro
+                </a>.
+              </p>
+            </section>
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h2>
               <p className="text-gray-700 leading-relaxed">

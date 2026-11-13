@@ -112,7 +112,7 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              Free • iPhone & Apple Watch recommended
+              Free to download • iPhone & Apple Watch recommended
             </motion.p>
 
             {/* Product Hunt Badge */}
@@ -136,8 +136,8 @@ export default function Hero() {
             >
               <Parallax speed="slow">
                 <PhoneMockup
-                  imageSrc="/product/iphone-1-nobg.png"
-                  alt="Movitalis VO₂ Max Dashboard"
+                  imageSrc="/product/hero-phones.png"
+                  alt="Movitalis on iPhone: VO₂ max insights and the workouts list"
                   enableTilt={true}
                   clean={true}
                 />

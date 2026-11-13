@@ -5,9 +5,14 @@ import { APP_CONFIG } from '@/lib/constants';
 
 export const metadata = {
   title: 'Privacy Policy - Movitalis',
-  description: 'Privacy Policy for Movitalis - Learn how we protect your data.',
+  description: 'How Movitalis handles your data, on this website and in the app.',
 };
 
+// One policy, one source of truth: the full Movitalis privacy policy is the
+// document the app links to (APP_CONFIG.privacyPolicyUrl). This page covers
+// the website itself and points there for the app, so the two can never
+// disagree again. Update the date by hand when the text changes — a date
+// computed at render time claimed the policy was "updated today" forever.
 export default function PrivacyPage() {
   return (
     <>
@@ -18,79 +23,48 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <div className="prose prose-lg max-w-none">
-            <p className="text-gray-600 mb-8">
-              Last updated: {new Date().toLocaleDateString()}
-            </p>
+            <p className="text-gray-600 mb-8">Last updated: 13 November 2026</p>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Introduction</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Who we are</h2>
               <p className="text-gray-700 leading-relaxed">
-                Movitalis ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our mobile application and services.
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Data We Collect</h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                We collect the following types of information:
-              </p>
-              <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                <li>Health and fitness data (VO₂ max, workout data, activity metrics) from Apple Health</li>
-                <li>Account information (email address, name)</li>
-                <li>Usage data and analytics</li>
-                <li>Device information</li>
-              </ul>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">How We Use Your Data</h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                We use your data to:
-              </p>
-              <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                <li>Provide and improve our services</li>
-                <li>Generate personalized training recommendations</li>
-                <li>Track your progress and VO₂ max improvements</li>
-                <li>Send you notifications about your workouts</li>
-                <li>Analyze and improve app performance</li>
-              </ul>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Data Storage</h2>
-              <p className="text-gray-700 leading-relaxed">
-                Your health data is stored securely using Firebase services with encryption both in transit and at rest. We implement industry-standard security measures to protect your information.
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Data Sharing</h2>
-              <p className="text-gray-700 leading-relaxed">
-                We do not sell your personal data. We may share data with service providers who help us operate our app (such as cloud hosting providers), but only to the extent necessary to provide our services.
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Your Rights</h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                You have the right to:
-              </p>
-              <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                <li>Access your personal data</li>
-                <li>Request deletion of your data</li>
-                <li>Export your data</li>
-                <li>Opt-out of certain data collection</li>
-                <li>Update or correct your information</li>
-              </ul>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Us</h2>
-              <p className="text-gray-700 leading-relaxed">
-                If you have any questions about this Privacy Policy, please contact us at{' '}
+                Movitalis is operated by {APP_CONFIG.company.name}, a Romanian company (CUI {APP_CONFIG.company.cui}, Trade Register {APP_CONFIG.company.tradeRegister}), with its registered office at {APP_CONFIG.company.address}. For anything in this document, write to{' '}
                 <a href={`mailto:${APP_CONFIG.supportEmail}`} className="text-primary hover:underline">
                   {APP_CONFIG.supportEmail}
+                </a>.
+              </p>
+            </section>
+            <section className="mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">The Movitalis app</h2>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                The full privacy policy for the Movitalis app—what data the app handles, why, the services that process it for us, how long it is kept and how to delete it—is published here:{' '}
+                <a href={APP_CONFIG.privacyPolicyUrl} className="text-primary hover:underline">
+                  Movitalis Privacy Policy
+                </a>. It is the same document the app links to.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                In short: your Apple Health data is read on your phone and stays there unless you choose to sync it; your account stores your email, name, plan and progress; we never sell personal data.
+              </p>
+            </section>
+            <section className="mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">This website</h2>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                movitalis.app is an informational site. It has no sign-up forms, sets no cookies, and runs no analytics or advertising trackers, which is why you see no cookie banner.
+              </p>
+              <ul className="list-disc pl-6 text-gray-700 space-y-2">
+                <li>The site is hosted on Firebase Hosting (Google). Like any web host, it processes technical request data such as your IP address to deliver the pages and keep the service secure.</li>
+                <li>Links to the App Store, Product Hunt, Instagram and TikTok take you to those services, which have their own privacy policies.</li>
+                <li>If you email us, we use your address and message only to answer you.</li>
+              </ul>
+            </section>
+            <section className="mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Your rights</h2>
+              <p className="text-gray-700 leading-relaxed">
+                Under the GDPR you can ask us for access to your personal data, its correction, deletion, restriction or portability, object to its processing, and withdraw a consent you gave. Write to us at the address above. You can also lodge a complaint with the Romanian data protection authority, ANSPDCP ({' '}
+                <a href="https://www.dataprotection.ro/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  dataprotection.ro
                 </a>
+                ), or with the authority in your own EU country.
               </p>
             </section>
           </div>
