@@ -5,7 +5,7 @@ import { APP_CONFIG } from '@/lib/constants';
 
 export const metadata = {
   title: 'Connect Movitalis to Claude - Movitalis',
-  description: 'Let Claude read your Movitalis workouts and propose a training plan. Setup, what it can access, and how to disconnect.',
+  description: 'Let Claude read your Movitalis training and propose changes you accept in the app. Setup, what it can access, and how to disconnect.',
 };
 
 const CONNECTOR_URL = 'https://mcp.movitalis.app/mcp';
@@ -25,11 +25,11 @@ export default function ClaudePage() {
             Connect Movitalis to Claude
           </h1>
           <div className="prose prose-lg max-w-none">
-            <p className="text-ink/60 mb-8">Last updated: 18 November 2026</p>
+            <p className="text-ink/60 mb-8">Last updated: 19 November 2026</p>
 
             <section className="mb-8">
               <p className="text-ink/80 leading-relaxed">
-                Movitalis has a connector for Claude, the AI assistant made by Anthropic. Once connected, you can ask Claude about your training in plain language, and Claude can propose a training plan that you review and accept in the app.
+                Movitalis has a connector for Claude, the AI assistant made by Anthropic. Once connected, you can ask Claude about your training in plain language, and Claude can propose a plan or changes to it that you review and accept in the app.
               </p>
             </section>
 
@@ -59,22 +59,23 @@ export default function ClaudePage() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-ink mb-4">What Claude can read</h2>
               <ul className="list-disc pl-6 text-ink/80 space-y-2">
-                <li><strong>Profile</strong>: name, age, estimated maximum heart rate, your training zones and weekly target.</li>
+                <li><strong>Profile</strong>: name, age, maximum heart rate (estimated, measured or entered by you), the heart-rate zones for running and cycling, your intensity level and recent volume, weekly target and time zone.</li>
+                <li><strong>Training setup</strong>: your goal, tests and races with their results and the paces worked out from them, the kind of plan you have and why, plan rules, daily habits, and the days and sports you chose.</li>
                 <li><strong>Workouts</strong> from the last six months: time, distance, heart rate, calories, splits, pauses, the route when one was recorded, and the category Movitalis detected.</li>
                 <li><strong>VO₂ max history</strong> and its trend.</li>
-                <li><strong>Weekly activity</strong>: minutes in zone 2, VO₂ max and strength against your plan.</li>
+                <li><strong>Weekly activity</strong>: minutes in zone 2, VO₂ max and strength against your plan, whether each week met it, and which workout counted for each planned session.</li>
                 <li><strong>Training plan</strong>: the planned sessions of your week and your active program.</li>
                 <li><strong>Streaks and achievements</strong>.</li>
               </ul>
               <p className="text-ink/80 leading-relaxed mt-4">
-                Claude cannot change or delete any of this. Data read from Strava is never passed to Claude.
+                Claude cannot change or delete any of this. It never sees an injury or illness you mark in the app, or your strength log. Data read from Strava is never passed to Claude.
               </p>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-ink mb-4">Proposing a training plan</h2>
+              <h2 className="text-2xl font-bold text-ink mb-4">Proposing changes</h2>
               <p className="text-ink/80 leading-relaxed">
-                If you allow it when you connect, Claude can also propose a weekly training plan. A proposal is a draft: it appears on the home screen of Movitalis as &ldquo;Proposed plan&rdquo;, where you see it checked against the app&rsquo;s own guidance, change anything you like, and then use it or discard it. Your current plan keeps running until you choose to use the proposal. This needs Movitalis 5.3 or later.
+                When the approval page in Movitalis says Claude can make proposals, Claude can propose a training plan, moving, swapping or skipping a single session, the kind of plan and its rules, and new heart-rate zones or a maximum heart rate. Every proposal appears on the home screen of Movitalis, where you accept or decline it. A proposed plan is checked against the app&rsquo;s own guidance and you can change it before you use it. Nothing changes until you accept. Reviewing proposals needs Movitalis Premium or an active trial, and Movitalis 5.3 or later.
               </p>
             </section>
 
@@ -91,7 +92,7 @@ export default function ClaudePage() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-ink mb-4">How to disconnect</h2>
               <p className="text-ink/80 leading-relaxed">
-                In Movitalis, open Profile, then Integrations, then Claude, and tap <strong>Revoke</strong> next to the connection. Access stops immediately. You can also remove the connector in Claude&rsquo;s settings. Deleting your Movitalis account removes every connection and any unanswered proposal.
+                In Movitalis, open Profile, then Integrations, then Claude, and tap <strong>Disconnect</strong>. Access stops immediately. Turning progress sync off also disconnects Claude. You can also remove the connector in Claude&rsquo;s settings. Deleting your Movitalis account removes every connection and every proposal.
               </p>
             </section>
 
